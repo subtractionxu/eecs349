@@ -51,7 +51,7 @@
 		<p class="tagline">A course project website for <strong>EECS 349 Machine Learning</strong> at <strong>Northwestern University</strong></p>
 		<p class="tagline">And an <strong>artificial intelligent</strong> system caring for your <strong>health</strong>, completely free of charge :)</p>
 	</div>
-	<div class="img-holder mt-3"><img src="bg.png" alt="phone" class="img-fluid"></div>
+	<div class="img-holder mt-3"><img src="images/bg.png" alt="phone" class="img-fluid"></div>
 </header>
 
 <div class="section light-bg" id="features">
@@ -138,62 +138,64 @@
 
 		<ul class="nav nav-tabs nav-justified" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" data-toggle="tab" href="#communication"><h4>Word Vectorization</h4></a>
+				<a class="nav-link active" data-toggle="tab" href="#communication"><h4>Input/Output</h4></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#schedule"><h4>Feature Extraction</h4></a>
+				<a class="nav-link" data-toggle="tab" href="#schedule"><h4>Word Vectorization</h4></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#messages"><h4>Classification</h4></a>
+				<a class="nav-link" data-toggle="tab" href="#messages"><h4>Feature Extraction</h4></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#livechat"><h4>Output</h4></a>
+				<a class="nav-link" data-toggle="tab" href="#livechat"><h4>Classification</h4></a>
 			</li>
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane fade show active" id="communication">
 				<div class="d-flex flex-column flex-lg-row">
-					<img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
 					<div>
+						<h2>Input/Output</h2>
+						<p class="lead">From 'symptems' to 'the most related medical department'</p>
+						<p>The raw input is a sentance or two describing the symptons of the paitient in words. For example,</p>
+						<h5 align = center>"A 23-year-old white female presents with complaint of allergies."</h5>
+						<p> The output we're expecting is the medical department this patient could most likely seek help from. In this case, the output should be</p>
+						<h5 align = center>Allergy / Immunology</h5>
 
-						<h2>Communicate with ease</h2>
-						<p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-							congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-						</p>
-						<p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-							sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-						</p>
 					</div>
 				</div>
 			</div>
 			<div class="tab-pane fade" id="schedule">
 				<div class="d-flex flex-column flex-lg-row">
 					<div>
-						<h2>Scheduling when you want</h2>
-						<p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-							congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
+						<h2>Word Vectorization</h2>
+						<p class="lead">'Preprocess' and 'Bag of Words' </p>
+						<p>The first thing we need to do to preprocess the raw inputs. After steps such as removing punctuations, regularization, removing stop words, tokenization and lemmatization, a raw input such as "A 23-year-old white female presents with complaint of allergies." will be transformed into a list of words tokens are shown in the picture below.
 						</p>
-						<p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-							sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+						<div class = "margin = 10px">
+							<img src="images/preprocess.png" alt="graphic" width = 100%>
+						</div>
+						<br>
+						<p> The next step is to vectorized the list of words, using the "Bag Of Words" theory as shown below. (The is a toy sample, the dimension of our actual vectors are to big for a clear visualization purpose.)
 						</p>
+						<div class = "margin = 10px" align = center>
+							<img src="images/bow.jpg" alt="graphic" width = 80%>
+						</div>						
 					</div>
-					<img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+					
 				</div>
 			</div>
 			<div class="tab-pane fade" id="messages">
 				<div class="d-flex flex-column flex-lg-row">
-					<img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
 					<div>
-						<h2>Realtime Messaging service</h2>
-						<p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-							congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
+						<h2>Feature Extraction</h2>
+						<p class="lead">Learning the 'key words' for every medical department</p>
+						<p>Our goal of feature (or key words) extaction is achieved through linear calssification. Performing a slightly twisted "one-verses-all" classification of all of the exixting department's sample set, we're alble to get hold of the top 15 weighted words for every class, AKA the most important 15 words for every medical departments, and their final weights after the training.
 						</p>
-						<p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-							sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-						</p>
+						<div>
+						<div class = "img-fluid rounded" align = center>
+							<img src="images/features.jpg" alt="graphic" width = 75%>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
